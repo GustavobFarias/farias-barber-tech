@@ -1,7 +1,7 @@
+import { Button } from "./_components/ui/button";
+
 function Home() {
-  return (
-    <h1 className="text-red-500 mb-5 bg-red-400">Page Home</h1>
-  );
+  return <Button>Teste</Button>
 }
 
 export default Home;
