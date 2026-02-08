@@ -1,10 +1,10 @@
 import { SearchIcon } from "lucide-react"
-import Header from "./_components/Header"
+import Header from "./_components/header"
 import { db } from "./_lib/prisma"
 import { Button } from "./_components/ui/button"
 import { Input } from "./_components/ui/input"
 import Image from "next/image"
-import BarberShopItem from "./_components/BarberShopItem"
+import BarberShopItem from "./_components/barberShopItem"
 import { quickSearchOptions } from "./_constants/Seach"
 import BookingItem from "./_components/booking-item"
 

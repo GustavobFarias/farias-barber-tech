@@ -1,5 +1,5 @@
 import PhoneItems from "@/app/_components/phone-items"
-import ServicesItem from "@/app/_components/Services-item"
+import ServicesItem from "@/app/_components/services-item"
 import { Button } from "@/app/_components/ui/button"
 import { db } from "@/app/_lib/prisma"
 import { ChevronLeftIcon, MapPinIcon, MenuIcon, StarIcon } from "lucide-react"
