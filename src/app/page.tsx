@@ -15,7 +15,6 @@ const Home = async () => {
       name: "desc",
     },
   })
-  console.log(barberShops)
   return (
     <div>
       <Header />
