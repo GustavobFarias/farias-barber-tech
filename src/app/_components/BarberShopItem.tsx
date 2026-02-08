@@ -30,6 +30,7 @@ const BarberShopId = ({ barberShop }: BarberShopItemprops) => {
             <p>5,0</p>
           </Badge>
         </div>
+
         <div className="px-1 py-3">
           <h3 className="truncate font-semibold">{barberShop.name}</h3>
           <p className="truncate text-sm text-gray-400">{barberShop.address}</p>
