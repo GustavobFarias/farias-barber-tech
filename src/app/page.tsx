@@ -4,7 +4,6 @@ import { db } from "./_lib/prisma"
 import { Button } from "./_components/ui/button"
 import { Input } from "./_components/ui/input"
 import Image from "next/image"
-import { Card, CardContent } from "./_components/ui/card"
 import BarberShopItem from "./_components/BarberShopItem"
 import { quickSearchOptions } from "./_constants/Seach"
 import BookingItem from "./_components/booking-item"
@@ -82,17 +81,6 @@ const Home = async () => {
           ))}
         </div>
       </div>
-
-      {/* FOOTER */}
-      <footer>
-        <Card className="rounded-none">
-          <CardContent className="px-5 py-6">
-            <p className="tex-sm text-gray-400">
-              © 2026 Copyright <span className="font-bold">FSW Barber</span>
-            </p>
-          </CardContent>
-        </Card>
-      </footer>
     </div>
   )
 }
