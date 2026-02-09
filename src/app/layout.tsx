@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import Footer from "./_components/footer"
 import { Toaster } from "./_components/ui/sonner"
+import AuthProvider from "./_providers/auth"
 
 export const metadata: Metadata = {
   title: "BarberTech",
@@ -16,11 +17,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className="dark">
-        {children}
-
-        <Toaster />
-
-        <Footer />
+        <AuthProvider>
+          {children}
+          <Toaster />
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   )
