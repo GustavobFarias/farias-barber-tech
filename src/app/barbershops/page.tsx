@@ -1,0 +1,41 @@
+import BarberShopItem from "../_components/barberShopItem"
+import Header from "../_components/header"
+import Search from "../_components/search"
+import { db } from "../_lib/prisma"
+
+interface BarbershopsPageProps {
+  searchParams: {
+    search?: string
+  }
+}
+
+const BarbershopsPage = async ({ searchParams }: BarbershopsPageProps) => {
+  const barbershops = await db.barberShop.findMany({
+    where: {
+      name: {
+        contains: searchParams?.search,
+        mode: "insensitive",
+      },
+    },
+  })
+  return (
+    <div>
+      <Header />
+      <div className="my-6 px-5">
+        <Search />
+      </div>
+      <div className="px-5">
+        <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
+          resultados para &quot;{searchParams?.search}&quot;
+        </h2>
+        <div className="grid grid-cols-2">
+          {barbershops.map((barbershop) => (
+            <BarberShopItem key={barbershop.id} barberShop={barbershop} />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default BarbershopsPage
